@@ -4,7 +4,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
-
+/* Kalenterin luukkujen koko ja paikka */
 .calendar {
     display: grid;
     grid-template-columns: repeat(6, 200px);
@@ -16,6 +16,7 @@ body {
    
 }
 
+/* Luukkujen tyylit */
 .door {
     position: relative;
     width: 200px;
