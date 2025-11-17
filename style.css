@@ -4,18 +4,21 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
+
+* {
+    user-select: none;
+}
+
 /* Kalenterin luukkujen koko ja paikka */
 .calendar {
     display: grid;
     grid-template-columns: repeat(6, 200px);
     grid-template-rows: repeat(4, 100px);
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
     
-    
-   
 }
-
+/* Solut luukuille ja lahjoille */
 .cell {
     position: relative;
     width: 200px;
@@ -29,13 +32,13 @@ body {
     z-index: 1;
     width: 100%;
     height: 100%;
+    
     background-color: red;
     border-radius: 10px;
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
 
-  
-    
+    cursor: pointer;
 }
 
 /* Luukun sisältö */
@@ -50,7 +53,7 @@ body {
     border-radius: 10px;
 }
 
-
+/* Avoimen oven tyyli */
 .door.open {
-    background-color: rgba(39, 27, 210, 0);
+    opacity: 0;
 }
