@@ -8,9 +8,11 @@ function createCalendar() {
         const door = document.createElement("button");
         door.classList.add("door");
         door.textContent = (i+1);
+        
 
         const gift = document.createElement("div");
         gift.classList.add("gift");
+        
 
         cell.appendChild(door);
         cell.appendChild(gift);
