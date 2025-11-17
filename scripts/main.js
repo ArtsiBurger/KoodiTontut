@@ -1,0 +1,2 @@
+createCalendar();
+detectClick();

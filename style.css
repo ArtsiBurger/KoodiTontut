@@ -16,18 +16,41 @@ body {
    
 }
 
-/* Luukkujen tyylit */
-.door {
+.cell {
     position: relative;
     width: 200px;
     height: 100px;
+}
+/* Luukkujen tyylit */
+.door {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: red;
     border-radius: 10px;
-    background-color: crimson;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+
+  
     
-    
-    
-    
+}
+
+/* Luukun sisältö */
+.gift {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+
+.door.open {
+    background-color: rgba(39, 27, 210, 0);
 }
