@@ -18,12 +18,14 @@ body {
     justify-content: center;
     
 }
+
 /* Solut luukuille ja lahjoille */
 .cell {
     position: relative;
     width: 200px;
     height: 100px;
 }
+
 /* Luukkujen tyylit */
 .door {
     position: absolute;
