@@ -27,12 +27,16 @@ export function createCalendar() {
     const numbers = randomizeNumbers();
 
     for (let i = 0; i < 24; i++) {
+        const doorNumber = numbers[i];
         const cell = document.createElement("div");
         cell.classList.add("cell");
 
         const door = document.createElement("button");
         door.classList.add("door");
-        door.textContent = (numbers[i]);
+        door.textContent = (doorNumber);
+        if (checkDoorOpen(doorNumber)) {
+            door.classList.add("open");
+        }
         
         const giftContainer = document.createElement("div");
         giftContainer.classList.add("gift");
@@ -62,6 +66,20 @@ function checkDate(doorNumber) {
     }
     return false;
 }
+
+function setDoorOpen(doorNumber) {
+    const doors = JSON.parse(localStorage.getItem("doors") || "{}");
+    doors[doorNumber] = true;
+    localStorage.setItem("doors", JSON.stringify(doors));
+}
+function checkDoorOpen(doorNumber) {
+    const doors = JSON.parse(localStorage.getItem("doors") || "{}");
+    if (doors[doorNumber]) {
+        return true;
+    }
+    return false;
+}
+
 // Havaitsee käyttäjän syötteen
 export function detectClick() {
     const doors = document.querySelectorAll(".door");
@@ -75,8 +93,10 @@ export function detectClick() {
             if (permission) {
                 door.classList.add("open");
                 text.textContent = "Here is a little surprise for you!"
+                setDoorOpen(doorNumber);
             }
             else {
+                sound.volume = 0.4;
                 sound.play();
                 text.textContent = "You shall not pass!";
             }
