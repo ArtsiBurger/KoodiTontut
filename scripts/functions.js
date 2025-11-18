@@ -1,3 +1,5 @@
+import { gifts } from "./gifts.js";
+
 // Arpoo luukkujen numerot satunnaiseen järjestykseen
 function randomizeNumbers() {    
     const numbers = [];
@@ -19,10 +21,10 @@ function getGift(doorNumber) {
 }
 
 // Tekee kalenterin, luukut ja lahjat
-function createCalendar() {   
+export function createCalendar() {   
     const calendar = document.querySelector(".calendar");
 
-    numbers = randomizeNumbers();
+    const numbers = randomizeNumbers();
 
     for (let i = 0; i < 24; i++) {
         const cell = document.createElement("div");
@@ -61,7 +63,7 @@ function checkDate(doorNumber) {
     return false;
 }
 // Havaitsee käyttäjän syötteen
-function detectClick() {
+export function detectClick() {
     const doors = document.querySelectorAll(".door");
 
     doors.forEach(door => {
@@ -72,7 +74,7 @@ function detectClick() {
                 door.classList.add("open");
             }
             else {
-                text = document.getElementById("outputText");
+                const text = document.getElementById("outputText");
                 text.textContent = "You shall not pass!";
             }
         })
