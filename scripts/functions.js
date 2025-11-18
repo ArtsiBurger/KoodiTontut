@@ -12,6 +12,12 @@ function randomizeNumbers() {
     }
     return numbers;
 }
+// Hakee oven numeroa vastaavan lahjan lahjaluettelosta
+function getGift(doorNumber) {
+    const gift = gifts[doorNumber - 1].link;
+    return gift;
+}
+
 // Tekee kalenterin, luukut ja lahjat
 function createCalendar() {   
     const calendar = document.querySelector(".calendar");
@@ -26,11 +32,13 @@ function createCalendar() {
         door.classList.add("door");
         door.textContent = (numbers[i]);
         
-        const gift = document.createElement("div");
-        gift.classList.add("gift");
+        const giftContainer = document.createElement("div");
+        giftContainer.classList.add("gift");
+        const gift = getGift(numbers[i]);
+        giftContainer.style.backgroundImage = gift;
         
         cell.appendChild(door);
-        cell.appendChild(gift);
+        cell.appendChild(giftContainer);
         calendar.appendChild(cell);   
     }
 }

@@ -1,0 +1,27 @@
+// Taulukko lahjoille
+const gifts = [
+    { id: 1, name: "Ai-koira", link: "url('gifts/TestiKuva.jpeg')" },
+    { id: 2, name: "dummy2", link: "url('')" },
+    { id: 3, name: "dummy3", link: "url('')" },
+    { id: 4, name: "dummy4", link: "url('')" },
+    { id: 5, name: "dummy5", link: "url('')" },
+    { id: 6, name: "dummy6", link: "url('')" },
+    { id: 7, name: "dummy7", link: "url('')" },
+    { id: 8, name: "dummy8", link: "url('')" },
+    { id: 9, name: "dummy9", link: "url('')" },
+    { id: 10, name: "dummy10", link: "url('')" },
+    { id: 11, name: "dummy11", link: "url('')" },
+    { id: 12, name: "dummy12", link: "url('')" },
+    { id: 13, name: "dummy13", link: "url('')" },
+    { id: 14, name: "dummy14", link: "url('')" },
+    { id: 15, name: "dummy15", link: "url('')" },
+    { id: 16, name: "dummy16", link: "url('')" },
+    { id: 17, name: "dummy17", link: "url('')" },
+    { id: 18, name: "dummy18", link: "url('')" },
+    { id: 19, name: "dummy19", link: "url('')" },
+    { id: 20, name: "dummy20", link: "url('')" },
+    { id: 21, name: "dummy21", link: "url('')" },
+    { id: 22, name: "dummy22", link: "url('')" },
+    { id: 23, name: "dummy23", link: "url('')" },
+    { id: 24, name: "dummy24", link: "url('')" }
+]
