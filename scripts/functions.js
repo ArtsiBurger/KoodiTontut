@@ -66,12 +66,13 @@ function checkDate(doorNumber) {
     }
     return false;
 }
-
+// Lisää LocalStorageen, että ovi on avattu
 function setDoorOpen(doorNumber) {
     const doors = JSON.parse(localStorage.getItem("doors") || "{}");
     doors[doorNumber] = true;
     localStorage.setItem("doors", JSON.stringify(doors));
 }
+// Tarkastaa onko ovi avattu ennen
 function checkDoorOpen(doorNumber) {
     const doors = JSON.parse(localStorage.getItem("doors") || "{}");
     if (doors[doorNumber]) {

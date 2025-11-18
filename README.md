@@ -9,3 +9,4 @@
 - mahdollisesti video
 
 ## Muistiinpanoja:
+- Favicon
