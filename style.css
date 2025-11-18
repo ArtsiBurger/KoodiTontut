@@ -1,12 +1,20 @@
 body {
     color: whitesmoke;
     background-color: black;
-    font-family: 'Courier New', Courier, monospace;
+    
     text-align: center;
+}
+h1 {
+    font-size: 40px;
+    
+}
+p {
+    font-size: 20px;
 }
 
 * {
     user-select: none;
+    font-family: "Great Vibes", cursive;
 }
 
 /* Kalenterin luukkujen koko ja paikka */
@@ -38,7 +46,7 @@ body {
     background-color: red;
     border-radius: 10px;
     font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    
 
     cursor: pointer;
 }
