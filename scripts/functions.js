@@ -34,13 +34,39 @@ function createCalendar() {
         calendar.appendChild(cell);   
     }
 }
+// Tarkastaa päivämäärän
+function checkDate(doorNumber) {
+    const utc = new Date();
+    const timezoneOffset = 2; // Aikaero UTC-aikaan
+    const time = new Date(utc + timezoneOffset * 3600 * 1000);
+    
+    const year = time.getFullYear();
+    const month = time.getMonth() + 1;
+    const date = time.getDate();
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // Testaamista varten month == 11. Lopullisessa month == 12.
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    if (year == 2025 && month == 11 && doorNumber <= date) {
+        return true;
+    }
+    return false;
+}
+
 // Havaitsee käyttäjän syötteen
 function detectClick() {
     const doors = document.querySelectorAll(".door");
 
     doors.forEach(door => {
         door.addEventListener("click", () => {
-            door.classList.add("open");
+            const doorNumber = door.textContent;
+            const permission = checkDate(doorNumber);
+            if (permission) {
+                door.classList.add("open");
+            }
+            else {
+                console.log("You have no permission!")
+            }
         })
     })
 }
