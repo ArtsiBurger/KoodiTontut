@@ -12,7 +12,7 @@ function randomizeNumbers() {
     }
     return numbers;
 }
-// Tekee kalenterin, luukut ja lahja
+// Tekee kalenterin, luukut ja lahjat
 function createCalendar() {   
     const calendar = document.querySelector(".calendar");
 
@@ -52,7 +52,6 @@ function checkDate(doorNumber) {
     }
     return false;
 }
-
 // Havaitsee käyttäjän syötteen
 function detectClick() {
     const doors = document.querySelectorAll(".door");
@@ -65,7 +64,8 @@ function detectClick() {
                 door.classList.add("open");
             }
             else {
-                console.log("You have no permission!")
+                text = document.getElementById("outputText");
+                text.textContent = "You shall not pass!";
             }
         })
     })
