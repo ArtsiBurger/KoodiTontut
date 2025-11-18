@@ -65,6 +65,8 @@ function checkDate(doorNumber) {
 // Havaitsee käyttäjän syötteen
 export function detectClick() {
     const doors = document.querySelectorAll(".door");
+    const text = document.getElementById("outputText");
+    const sound = new Audio("sounds/You_Shall_Not_Pass_Sound_Effect.mp3");
 
     doors.forEach(door => {
         door.addEventListener("click", () => {
@@ -72,9 +74,10 @@ export function detectClick() {
             const permission = checkDate(doorNumber);
             if (permission) {
                 door.classList.add("open");
+                text.textContent = "Here is a little surprise for you!"
             }
             else {
-                const text = document.getElementById("outputText");
+                sound.play();
                 text.textContent = "You shall not pass!";
             }
         })
