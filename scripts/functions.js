@@ -12,8 +12,6 @@ function randomizeNumbers() {
     }
     return numbers;
 }
-
-
 // Tekee kalenterin, luukut ja lahja
 function createCalendar() {   
     const calendar = document.querySelector(".calendar");
