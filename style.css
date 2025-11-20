@@ -24,7 +24,21 @@ p {
     grid-template-rows: repeat(4, 100px);
     gap: 30px;
     justify-content: center;
+    background-image: url("gifts/piparkakkutalo.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     
+}
+.gingerbread {
+    position: relative;
+    width: 1100px;
+    height: 800px;
+    margin: 40px auto;
+    background-image: url("gifts/piparkakkutalo.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Solut luukuille ja lahjoille */
