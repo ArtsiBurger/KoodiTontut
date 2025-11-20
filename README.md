@@ -10,3 +10,6 @@
 
 ## Muistiinpanoja:
 - Favicon
+- Ovi animaatio
+- On hover
+- Skaalaus eri laitteille
