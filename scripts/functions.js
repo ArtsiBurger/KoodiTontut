@@ -5,7 +5,7 @@ function randomizeNumbers() {
     const numbers = [];
 
     for (let i = 0; i < 24; i++) {
-        numbers.push(i+1);
+        numbers.push(i + 1);
     }
     // Fisher-Yates algoritmi
     for (let i = numbers.length - 1; i >= 1; i--) {
