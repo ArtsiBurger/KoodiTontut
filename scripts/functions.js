@@ -41,7 +41,7 @@ export function createCalendar() {
         const giftContainer = document.createElement("div");
         giftContainer.classList.add("gift");
         const gift = getGift(numbers[i]);
-        giftContainer.style.backgroundImage = gift;
+        giftContainer.style.backgroundImage = `url("${gift}")`;
         
         cell.appendChild(door);
         cell.appendChild(giftContainer);

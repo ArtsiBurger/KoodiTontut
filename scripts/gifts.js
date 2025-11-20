@@ -1,6 +1,6 @@
 // Taulukko lahjoille
 export const gifts = [
-    { id: 1, name: "Ai-koira", link: "url('gifts/TestiKuva.jpeg')" },
+    { id: 1, name: "Ai-koira", link: "gifts/TestiKuva.jpeg" },
     { id: 2, name: "dummy2", link: "url('')" },
     { id: 3, name: "dummy3", link: "url('')" },
     { id: 4, name: "dummy4", link: "url('')" },
