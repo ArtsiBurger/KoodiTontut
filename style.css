@@ -1,43 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: rgb(65, 90, 103);
-    font-family: "Great Vibes", cursive;
+    color: whitesmoke;
+    background-color: black;
+    
     text-align: center;
 }
 h1 {
-    font-family: "Great Vibes", cursive;
-    font-size: 100px;  
-    color: antiquewhite;
+    font-size: 40px;
+    
 }
-
 p {
-    font-family: "Great Vibes", cursive;
-    font-size: 80px;
-    color: rgb(30, 47, 68);
+    font-size: 20px;
 }
 
-/* Kalenterin luukkujen koko ja paikka
+* {
+    user-select: none;
+    font-family: "Great Vibes", cursive;
+}
+
+/* Kalenterin luukkujen koko ja paikka */
 .calendar {
     display: grid;
     grid-template-columns: repeat(6, 200px);
     grid-template-rows: repeat(4, 100px);
     gap: 30px;
-    max-width: 800px;
     justify-content: center;
-    user-select: none;
+    background-image: url("gifts/piparkakkutalo.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
-*/
 .gingerbread {
     position: relative;
     width: 1100px;
     height: 800px;
     margin: 40px auto;
-    background-image: url("piparkakkutalo.jpeg");
+    background-image: url("gifts/piparkakkutalo.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,27 +43,17 @@ p {
 
 /* Solut luukuille ja lahjoille */
 .cell {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-   /* background: red;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 50px;
-    color: rgb(52, 23, 23);*/
+    position: relative;
+    width: 200px;
+    height: 100px;
 }
 
 /* Luukkujen tyylit */
 .door {
-    user-select: none;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-<<<<<<< Updated upstream
     width: 100%;
     height: 100%;
     
@@ -74,20 +62,9 @@ p {
     border-radius: 10px;
     font-size: 50px;
 
-=======
-    width: 80px;
-    height: 80px%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 50px;
-    color: rgb(52, 23, 23);
-    border-radius: 10px;
->>>>>>> Stashed changes
     cursor: pointer;
-} 
-*/
+}
+
 /* Luukun sisältö */
 .gift {
     position: absolute;
