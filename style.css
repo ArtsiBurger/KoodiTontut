@@ -3,20 +3,30 @@ body {
     background-color: black;
     
     text-align: center;
+    margin: 0;
 }
 h1 {
     font-size: 40px;
-    
+    margin: 10px auto;
 }
 p {
     font-size: 20px;
+    margin: 0 auto;
 }
-
 * {
     user-select: none;
     font-family: "Great Vibes", cursive;
 }
-
+.calendarContainer {
+    position: relative;
+    width: 1400px;
+    height: 600px;
+    margin: 20px auto;
+    background-image: url("photos/taustakuva.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+}
 /* Kalenterin luukkujen koko ja paikka */
 .calendar {
     display: grid;
@@ -24,11 +34,7 @@ p {
     grid-template-rows: repeat(4, 100px);
     gap: 30px;
     justify-content: center;
-    background-image: url("photos/taustakuva.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    
+    padding-top: 50px;
 }
 .gingerbread {
     position: relative;
@@ -40,14 +46,12 @@ p {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 /* Solut luukuille ja lahjoille */
 .cell {
     position: relative;
     width: 200px;
     height: 100px;
 }
-
 /* Luukkujen tyylit */
 .door {
     position: absolute;
@@ -64,7 +68,6 @@ p {
 
     cursor: pointer;
 }
-
 /* Luukun sisältö */
 .gift {
     position: absolute;
@@ -77,7 +80,6 @@ p {
     background-size: cover;
     border-radius: 10px;
 }
-
 /* Avoimen oven tyyli */
 .door.open {
     opacity: 0;
