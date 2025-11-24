@@ -35,7 +35,7 @@ p {
     gap: 30px;
     justify-content: center;
     padding-top: 50px;
-}
+}/*
 .gingerbread {
     position: relative;
     width: 1100px;
@@ -45,7 +45,7 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
+}*/
 /* Solut luukuille ja lahjoille */
 .cell {
     position: relative;
