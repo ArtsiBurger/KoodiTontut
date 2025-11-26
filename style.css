@@ -1,12 +1,113 @@
+
+/* --------------------------
+   Lumihiutaleet
+---------------------------- */
+.snowflake {
+    color: antiquewhite;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*text-shadow: 1px 0 3px #fff783;*/
+}
+/* --------------------------
+   Animaation asetukset
+---------------------------- */
+.snowflake,
+.snowflake .inner {
+    animation-iteration-count: infinite; /* animaatio toistuu loputtomasti */
+    animation-play-state: running;       /* animaatio käynnissä heti */
+}
+/* --------------------------
+   Lumihiutaleiden putoaminen
+---------------------------- */
+@keyframes snowflakes-fall {
+    0% {
+        transform: translateY(0);      /* alkaa ylhäältä */
+    }
+    100% {
+        transform: translateY(110vh);  /* putoaa hieman ruudun alareunan alle */
+    }
+}
+/* --------------------------
+   Sivusuuntainen liike
+---------------------------- */
+@keyframes snowflakes-shake {
+    0%, 100% {
+        transform: translateX(0);      /* alku- ja loppuasento keskellä */
+    }
+    50% {
+        transform: translateX(80px);   /* liike oikealle */
+    }
+}
+/* --------------------------
+   Lumihiutaleiden perusasetukset
+---------------------------- */
+.snowflake {
+    position: fixed;           /* pysyy ruudulla scrollauksen aikana */
+    top: -10%;                 /* alkaa hieman ruudun yläpuolelta */
+    z-index: 9999;             /* näkyy kaikkien elementtien päällä */
+    user-select: none;         /* ei voi valita tekstiä */
+    cursor: default;           /* hiiren kursori normaalina */
+    pointer-events: none;      /* ei häiritse klikattavia elementtejä */
+    animation-name: snowflakes-shake; /* horjahdus-animaatio */
+    animation-duration: 3s;         /* horjahduksen kesto */
+    animation-timing-function: ease-in-out; /* liike pehmeästi */
+}
+/* --------------------------
+   Lumihiutaleiden putoaminen
+---------------------------- */
+.snowflake .inner {
+    animation-duration: 15s;           /* putoamisen kesto */
+    animation-name: snowflakes-fall;   /* putoamis-animaatio */
+    animation-timing-function: linear; /* putoaa tasaisella nopeudella */
+}
+
+/* --------------------------
+    Lumihiutaleiden sijainnit ja viiveet
+---------------------------- */
+.snowflake:nth-of-type(0) { left: 1%; animation-delay: 0s; }
+.snowflake:nth-of-type(0) .inner { animation-delay: 0s; }
+
+.snowflake:first-of-type { left: 10%; animation-delay: 1s; }
+.snowflake:first-of-type .inner,
+.snowflake:nth-of-type(8) .inner { animation-delay: 1s; }
+
+.snowflake:nth-of-type(2) { left: 20%; animation-delay: 0.5s; }
+.snowflake:nth-of-type(2) .inner,
+.snowflake:nth-of-type(6) .inner { animation-delay: 6s; }
+
+.snowflake:nth-of-type(3) { left: 30%; animation-delay: 2s; }
+.snowflake:nth-of-type(3) .inner,
+.snowflake:nth-of-type(11) .inner { animation-delay: 4s; }
+
+.snowflake:nth-of-type(4) { left: 40%; animation-delay: 2s; }
+.snowflake:nth-of-type(4) .inner,
+.snowflake:nth-of-type(10) .inner { animation-delay: 2s; }
+
+.snowflake:nth-of-type(5) { left: 50%; animation-delay: 3s; }
+.snowflake:nth-of-type(5) .inner { animation-delay: 8s; }
+
+.snowflake:nth-of-type(6) { left: 60%; animation-delay: 2s; }
+.snowflake:nth-of-type(7) { left: 70%; animation-delay: 1s; }
+.snowflake:nth-of-type(7) .inner { animation-delay: 2.5s; }
+
+.snowflake:nth-of-type(8) { left: 80%; animation-delay: 0s; }
+.snowflake:nth-of-type(9) { left: 90%; animation-delay: 1.5s; }
+.snowflake:nth-of-type(9) .inner { animation-delay: 3s; }
+
+.snowflake:nth-of-type(10) { left: 25%; animation-delay: 0s; }
+.snowflake:nth-of-type(11) { left: 65%; animation-delay: 2.5s; }
+
+/* --------------------------
+   Kalenterin perusasetukset
+---------------------------- */
 body {
     color: antiquewhite;
-    background-color:  rgb(3, 23, 22);
+    background-color:  rgb(3, 36, 66);
     text-align: center;
     margin: 0px;
     margin-top: 50px;
     user-select: none;
 }
-
 h1 {
     font-size: 80px;
     margin: 5px auto;
@@ -22,19 +123,23 @@ p {
 * {
     user-select: none;
     font-family: "Great Vibes", cursive;
-
 }
+/* --------------------------
+   Kalenterin taustakuva
+---------------------------- */
 .calendarContainer {
     position: relative;
     padding: 5%;
-    background-color: rgb(3, 23, 22);
+    background-color: rgb(3, 36, 66);
     background-image: url("photos/taustakuva.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     aspect-ratio: 16 / 9; 
 }
-/* Kalenterin luukkujen koko ja paikka */
+/* --------------------------
+   Luukkujen koko ja paikka
+---------------------------- */
 .calendar {
     position: absolute;
     padding: 10%;
@@ -44,14 +149,17 @@ p {
     grid-template-rows: repeat(4, 1fr);
     gap: 3%;
 }
-/* Solut luukuille ja lahjoille*/
+/* --------------------------
+   Solut luukuille ja lahjoille
+---------------------------- */
 .cell {
     position: relative;
     width: 100%;
     height: 100%;
 }
-
-/* Luukkujen tyylit */
+/* --------------------------
+   Luukkujen ulkoasu
+---------------------------- */
 .door {
     position: absolute;
     top: 0;
@@ -65,18 +173,21 @@ p {
     border-width: 1px;
     border-radius: 10px;
     font-size: 50px;
+    font-style: ;
     color: antiquewhite;
-    text-shadow: #010311 3px 2px 10px;
+    text-shadow: #080a1b 4px 0 4px;
     cursor: pointer;
 }
-
-/* Avoimen oven tyyli */
+/* --------------------------
+   Avoin luukku
+---------------------------- */
 .door.open {
     opacity: 1;
     pointer-events: auto;
 }
-
-/* Luukun sisältö*/
+/* --------------------------
+   Luukun sisältö
+---------------------------- */
 .gift {
     opacity: 0;
     pointer-events: none;
